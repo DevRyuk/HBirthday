@@ -1,0 +1,239 @@
+body {
+  background: lighten(cyan, 40%);
+}
+svg {
+  height: auto;
+  left: 50%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  g {
+    > g {
+      fill: transparent;
+      > path {
+        fill: inherit
+      } 
+    }
+    path {
+      fill: transparent;
+      stroke: black;
+      stroke-width: 1;
+    }
+  }
+}
+#i {
+  animation: i 1s forwards;
+  animation-delay: 0s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#wish {
+  animation: i 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#dot {
+  animation: i 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#you {
+  animation: i 1.2s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#a {
+  animation: i 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#sweet1 {
+  animation: i 1.3s forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#sweet2 {
+  animation: i 1.3s forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#cake {
+  //animation: cake 1.5s forwards;
+  animation-delay: 3.1s;
+  opacity: 1;
+  stroke-dasharray: 2000;
+  //transform: scale(0);
+  transform-origin: center;
+  //animation-timing-function: cubic-bezier(1, -.3, .3, 1.05);
+  > * {
+    stroke: transparent;
+  }
+  > #t1 {
+    animation: fromTop .5s forwards 4.2s;
+    fill: rgb(218,28,92);
+    opacity: 0;
+  }
+  > #t2 {
+    animation: cake .4s forwards 4.3s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+    transform-origin: center;
+  }
+  > #t3 {
+    animation: cake .4s forwards 4.4s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+    transform-origin: center;
+  }
+  > #t4 {
+    animation: cake .4s forwards 4.5s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+    transform-origin: center;
+  }
+  > #g1 {
+    animation: fromTop .5s forwards 4.2s;
+    fill: rgb(218,28,92);
+    opacity: 0;
+  }
+  > #g2 {
+    animation: fromTop .5s forwards 4s;
+    fill: rgb(218,28,92);
+    opacity: 0;
+  }
+  > #g3 {
+    animation: fromTop .5s forwards 4.1s;
+    fill: rgb(218,28,92);
+    opacity: 0;
+  }
+  > #g4 {
+    animation: fromTop .5s forwards 3.9s;
+    fill: rgb(218,28,92);
+    opacity: 0;
+  }
+  > #b1 {
+    animation: fromBottom .5s forwards 3.5s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+  }
+  > #b2 {
+    animation: fromBottom .5s forwards 3.6s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+  }
+  > #b3 {
+    animation: fromBottom .5s forwards 3.7s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+  }
+  > #b4 {
+    animation: fromBottom .5s forwards 3.8s;
+    fill: rgb(194,147,71);
+    opacity: 0;
+  }
+}
+#cherry { 
+  animation: outOfScreen 1s forwards 4.6s;
+  opacity: 0;
+  #tail {
+    fill: rgb(4,4,4);
+  }
+  path {
+    fill: rgb(218,28,92);
+    stroke: transparent;
+  }
+}
+#birthday {
+  animation: i 1.4s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+#sprinkle1, #sprinkle2 {
+  animation: sprinkles 2.2s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  stroke-dasharray: 2000;
+}
+@keyframes cake {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes i {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -2000;
+  }
+  80% {
+    fill: transparent;
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #121212;
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes outOfScreen {
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh) translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translateX(-100%);
+  }
+}
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes sprinkles {
+  0% {
+    stroke-dashoffset: -2000;
+    opacity: 1;
+  }
+  99% {
+    fill: transparent;
+    stroke: black;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    fill: rgb(194,147,71);
+    stroke: transparent;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
